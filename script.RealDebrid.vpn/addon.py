@@ -1,5 +1,6 @@
 import xbmcaddon
 import xbmcgui
+import xbmcplugin
 import urllib2
 import re
 import sys
@@ -37,5 +38,19 @@ for line in lines:
     if line1 != "" and line2 != "" and line3 != "":
       break
 
-xbmcgui.Dialog().ok("https://real-debrid.com/vpn", line2, line3, line1)
+if False:
+  xbmcgui.Dialog().ok("https://real-debrid.com/vpn", line2, line3, line1)
+else:
+  lines = line1.split('.')
+  for line in lines:
+    li = xbmcgui.ListItem(line.strip(), iconImage='DefaultFolder.png')
+    xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url="", listitem=li, isFolder=False)
 
+  li = xbmcgui.ListItem(line2, iconImage='DefaultFolder.png')
+  xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url="", listitem=li, isFolder=False)
+
+  li = xbmcgui.ListItem(line3, iconImage='DefaultFolder.png')
+  xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url="", listitem=li, isFolder=False)
+
+  xbmcplugin.setContent(int(sys.argv[1]), 'files')
+  xbmcplugin.endOfDirectory(int(sys.argv[1]))
