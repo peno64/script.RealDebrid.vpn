@@ -2,11 +2,6 @@
 This addon looks at the page https://real-debrid.com/vpn if the current ip is whitelisted or blocked for RealDebrid
 
 # Installation in kodi:
-Go to File manager
-- Add source
-- path: http://users.telenet.be/peno/kodi/addons/script.RealDebrid.vpn
-- name: script.RealDebrid.vpn
-Go to Add-ons, Install from zip file
-- script.RealDebrid.vpn, choose latest zip file
+See https://peno64.github.io/ and install script.RealDebrid.vpn*.zip
 
-Addon is installed and can be found in Addo-Ons under section Program add-ons
+Addon is installed and can be found in Add-ons under section Program add-ons
